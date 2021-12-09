@@ -6,9 +6,9 @@ namespace Address_Book_System_All
 {
     class AddressBook
     {
-        public static List<PersonDetails> contacts = new List<PersonDetails>();
+        private static List<PersonDetails> contacts = new List<PersonDetails>();
 
-        public static Dictionary<string, List<PersonDetails>> addressBook = new Dictionary<string, List<PersonDetails>>();
+        private static Dictionary<string, List<PersonDetails>> addressBook = new Dictionary<string, List<PersonDetails>>();
 
         public static void AddTo(string name)
         {
@@ -60,6 +60,24 @@ namespace Address_Book_System_All
                     Console.WriteLine("Phone number = " + Detailing.PhoneNumber);
                 }
             }
+        }
+
+        public static int SearchDuplicate(List<PersonDetails> contacts, PersonDetails contactBook)
+        {
+            foreach (var Details in contacts)
+            {
+                var person = contacts.Find(p => p.Firstname.Equals(contactBook.Firstname));
+                if (person != null)
+                {
+                    Console.WriteLine("Already this contact exist with same First name : " + person.Firstname);
+                    return 1;
+                }
+                else
+                {
+                    return 0;
+                }
+            }
+            return 0;
         }
     }
 }
