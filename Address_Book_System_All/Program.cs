@@ -17,9 +17,11 @@ namespace Address_Book_System_All
                 Console.Write("\n Enter name of Address Book : ");
                 string book = Console.ReadLine();
                 Console.WriteLine("\n Select the below option");
-                Console.WriteLine("1.Add Contact Details \n2.View Contant Details \n3.Edit Contant Details \n4.Delete Contact Details");
+                Console.WriteLine("1.Add Contact Details \n2.View Contant Details \n3.Find Person in City  \n4.Find Person in State");
                 Console.Write("Enter Your Choice : ");
                 int num = Convert.ToInt32(Console.ReadLine());
+
+
 
                 while (key != 0)
                 {
@@ -31,6 +33,12 @@ namespace Address_Book_System_All
                             break;
                         case 2:
                             AddressBook.Details();
+                            break;
+                        case 3:
+                            AddressBook.SearchCity();
+                            break;
+                        case 4:
+                            AddressBook.SearchState();
                             break;
                         default:
                             Console.Write("Choice correct option : ");
