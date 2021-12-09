@@ -10,8 +10,6 @@ namespace Address_Book_System_All
 
             AddressBook.AddContact();
             AddressBook.Display();
-            AddressBook.Delete();
-            AddressBook.Display();
         }
     }
 }
