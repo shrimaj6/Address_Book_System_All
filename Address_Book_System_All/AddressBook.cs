@@ -50,7 +50,7 @@ namespace Address_Book_System_All
                     {
                         Console.WriteLine(" First name-->{0}", contact.Firstname);
                         Console.WriteLine(" Last name-->{0}", contact.LastName);
-                        Console.WriteLine(" Address-->{0}", contact.Address);
+                        Console.WriteLine(" Address-->{0}", contact.Address); 
                         Console.WriteLine(" City-->{0}", contact.City);
                         Console.WriteLine(" State-->{0}", contact.State);
                         Console.WriteLine(" Zip code-->{0}", contact.ZipCode);
