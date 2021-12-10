@@ -2,10 +2,12 @@
 
 namespace Address_Book_System_All
 {
-    class Program
+   public class Program
     {
         static void Main(string[] args)
         {
+            
+
             Console.WriteLine("*********** Address Book Program ************\n");
 
             Console.Write("Enter Number of Address Book you want : ");
@@ -39,7 +41,7 @@ namespace Address_Book_System_All
                             AddressBook.Details();
                             break;
                         case 3:
-                            obj.ViewByCityOrStateName();
+                            AddressBook.CountByCityOrStateName();
                             break;
                         default:
                             Console.Write("Choice correct option : ");
