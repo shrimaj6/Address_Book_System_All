@@ -1,12 +1,14 @@
 ﻿using System;
+using System.Collections.Generic;
+
 
 namespace Address_Book_System_All
 {
    public class Program
     {
-        static void Main(string[] args)
+        public static void Main(string[] args)
         {
-            
+
 
             Console.WriteLine("*********** Address Book Program ************\n");
 
@@ -19,21 +21,14 @@ namespace Address_Book_System_All
                 Console.Write("\n Enter name of Address Book : ");
                 string book = Console.ReadLine();
                 Console.WriteLine("\n Select the below option");
-                Console.WriteLine("1.Add Contact Details \n2.View Contant Details \n3.Find Person in City or State");
+                Console.WriteLine("1.Add Contact Details \n2.View Contant Detials \n3.Count By City Or State Name");
                 Console.Write("Enter Your Choice : ");
                 int num = Convert.ToInt32(Console.ReadLine());
-
-
-                AddressBook obj = new AddressBook();
-                
-
-
 
                 while (key != 0)
                 {
                     switch (num)
                     {
-
                         case 1:
                             AddressBook.AddContact();
                             break;
@@ -41,7 +36,7 @@ namespace Address_Book_System_All
                             AddressBook.Details();
                             break;
                         case 3:
-                            AddressBook.CountByCityOrStateName();
+                            AddressBook.SortByFirstName();
                             break;
                         default:
                             Console.Write("Choice correct option : ");
